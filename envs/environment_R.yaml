@@ -4,4 +4,4 @@ dependencies:
 - r-base=4.0.3
 - pandoc=2.10
 - r-curl
-- r-units
+- udunits2
