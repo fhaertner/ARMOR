@@ -27,6 +27,12 @@ usePackage <- function(pkgs) {
     }
     
     ## Install the other packages
+    install.packages("remotes", repos = "http://cran.rstudio.com/",
+                         lib = .libPaths()[1])
+	remotes::install_version("RSQLite", version = "2.2.5", dependencies = TRUE,
+						repos = "http://cran.rstudio.com/", lib = .libPaths()[1],
+						Ncpus = as.integer(ncores))
+    
     isInstalled <- pkgs %in% installed.packages(lib.loc = .libPaths()[1])[, 1]
     BiocManager::install(pkgs[!isInstalled],
                          update = FALSE, dependencies = TRUE,
