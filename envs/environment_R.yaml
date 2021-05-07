@@ -3,5 +3,9 @@ channels:
 dependencies:
 - r-base=4.0.3
 - pandoc=2.10
+- libcurl
 - r-curl
 - udunits2
+- r-rmysql
+- r-gdtools
+- r-rpostgresql
